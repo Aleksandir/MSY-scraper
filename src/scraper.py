@@ -18,6 +18,20 @@ def main():
 
 
 def get_products_from_page(link: str) -> list[dict]:
+    """
+    Retrieves a list of products from a given page.
+
+    Args:
+        link (str): The URL of the page to scrape.
+
+    Returns:
+        list[dict]: A list of dictionaries, where each dictionary represents a product.
+                    Each product dictionary contains the following keys:
+                    - "name": The name of the product.
+                    - "price": The price of the product.
+                    - "link": The absolute URL of the product.
+                    - "stock": The stock availability of the product.
+    """
     coreURL = "https://www.msy.com.au"
     products = []
     soup = get_page(link)
@@ -46,6 +60,15 @@ def get_products_from_page(link: str) -> list[dict]:
 
 
 def get_links(file: str) -> list[str]:
+    """
+    Read the contents of a file and return a list of links.
+
+    Args:
+        file (str): The path to the file.
+
+    Returns:
+        list[str]: A list of links extracted from the file.
+    """
     with open(file, "r") as f:
         return f.read().splitlines()
 
