@@ -1,6 +1,5 @@
 # environment.yml
 
-name: PY312Scraper
 channels:
   - conda-forge
   - defaults
