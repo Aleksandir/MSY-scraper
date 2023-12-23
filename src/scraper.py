@@ -78,6 +78,7 @@ def get_products_from_page(link: str) -> list[dict]:
         except TypeError:
             continue
 
+        # add product to list of products after each product element is parsed
         products.append(product)
 
     return products
