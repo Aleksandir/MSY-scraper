@@ -1,5 +1,4 @@
-# environment.yml
-
+name: /Users/aleks/Documents/_GIthub_Repositories/MSY-scraper/.conda
 channels:
   - conda-forge
   - defaults
@@ -11,6 +10,7 @@ dependencies:
   - ca-certificates=2023.11.17=hf0a4a13_0
   - certifi=2023.11.17=pyhd8ed1ab_0
   - charset-normalizer=3.3.2=pyhd8ed1ab_0
+  - colorama=0.4.6=pyhd8ed1ab_0
   - exceptiongroup=1.2.0=pyhd8ed1ab_0
   - h11=0.14.0=pyhd8ed1ab_0
   - idna=3.6=pyhd8ed1ab_0
@@ -35,6 +35,7 @@ dependencies:
   - sortedcontainers=2.4.0=pyhd8ed1ab_0
   - soupsieve=2.5=pyhd8ed1ab_1
   - tk=8.6.13=h5083fa2_1
+  - tqdm=4.66.1=pyhd8ed1ab_0
   - trio=0.23.2=py312h81bd7bf_0
   - trio-websocket=0.11.1=pyhd8ed1ab_0
   - typing_extensions=4.9.0=pyha770c72_0
@@ -43,4 +44,4 @@ dependencies:
   - wheel=0.42.0=pyhd8ed1ab_0
   - wsproto=1.2.0=pyhd8ed1ab_0
   - xz=5.2.6=h57fd34a_0
-prefix: /Users/aleks/anaconda3/envs/PY312Scraper
+prefix: /Users/aleks/Documents/_GIthub_Repositories/MSY-scraper/.conda
