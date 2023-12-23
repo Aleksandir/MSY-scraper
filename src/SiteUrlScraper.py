@@ -12,7 +12,7 @@ def main():
     for div in divs:
         links.append(div.find("a")["href"] if div else None)  # type: ignore
 
-    with open("links.txt", "w") as f:
+    with open("data/links.txt", "w") as f:
         for link in links:
             f.write(f"https://www.msy.com.au/{link}\n")
 
