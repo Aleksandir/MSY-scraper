@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 def main():
-    soup = get_page()
+    soup = get_page("https://www.msy.com.au/categories")
     soup = BeautifulSoup(soup.content, "html.parser")
 
     divs = soup.find_all("div", {"class": "ovhide productsIn productsz"})
@@ -14,14 +14,13 @@ def main():
 
     with open("links.txt", "w") as f:
         for link in links:
-            f.write(f"{link}\n")
+            f.write(f"https://www.msy.com.au/{link}\n")
 
 
-def get_page(
-    url: str = "https://www.msy.com.au/categories",
-) -> requests.models.Response:
+def get_page(url: str) -> requests.models.Response:
     page = requests.get(url)
     return page
 
 
-main()
+if __name__ == "__main__":
+    main()
