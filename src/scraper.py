@@ -13,7 +13,8 @@ def main():
     links = get_links("data/links.txt")
 
     # for each link, get products from page using multithreading
-    with concurrent.futures.ThreadPoolExecutor() as executor:
+    # max workers is set to 5 to avoid overloading the server
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         future_to_link = {
             executor.submit(get_products_from_page, link): link for link in links
         }
